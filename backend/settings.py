@@ -83,12 +83,13 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-
+# import pymysql
+# pymysql.install_as_MySQLdb()
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'hrms_db',      
-        'USER': 'root',          
+        'USER': 'asmita',          
         'PASSWORD': '123456',      
         'HOST': 'localhost',              
         'PORT': '3306',                  

@@ -28,22 +28,22 @@ function Dashboard() {
 
       <div style={styles.cardContainer}>
         <div style={styles.card}>
-          <h3>Total Employees</h3>
+          <h3 style={styles.containerh1}>Total Employees</h3>
           <p style={styles.number}>{summary.total_employees}</p>
         </div>
 
-        <div style={styles.card}>
-          <h3>Total Attendance</h3>
+        <div style={styles.altercard}>
+          <h3 style={styles.containerh1}>Total Attendance</h3>
           <p style={styles.number}>{summary.total_attendance}</p>
         </div>
 
         <div style={styles.card}>
-          <h3>Present Today</h3>
+          <h3 style={styles.containerh1}>Present Today</h3>
           <p style={styles.number}>{summary.present_today}</p>
         </div>
 
-        <div style={styles.card}>
-          <h3>Absent Today</h3>
+        <div style={styles.altercard}>
+          <h3 style={styles.containerh1}>Absent Today</h3>
           <p style={styles.number}>{summary.absent_today}</p>
         </div>
       </div>
@@ -58,15 +58,29 @@ const styles = {
     gap: "20px",
   },
   card: {
-    background: "white",
+    background: "#5F9598",
     padding: "20px",
-    borderRadius: "8px",
-    boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+    borderRadius: "10px",
+    color: "white",
+    boxShadow: "0 4px 10px rgba(6, 30, 41, 0.1)",
   },
   number: {
     fontSize: "28px",
     fontWeight: "600",
     marginTop: "10px",
+  },
+  altercard: {
+	background: "rgba(6, 30, 41, 0.81)",
+	padding: "20px",
+	borderRadius: "10px",
+	color: "white",
+	boxShadow: "rgba(6, 30, 41, 0.1) 0px 4px 10px"
+  },
+  containerh1:{
+    color: "#fafbfcff",
+  },
+  container:{
+    color: "#1D546D",
   }
 };
 

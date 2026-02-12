@@ -40,9 +40,20 @@ function AttendanceForm({ refreshAttendance }) {
         status: "Present"
       });
       refreshAttendance();
-    } catch (error) {
+    }catch (error) {
+  if (error.response && error.response.data) {
+    const errorData = error.response.data;
+
+    if (errorData.non_field_errors) {
+      setError(errorData.non_field_errors[0]);
+    } else {
       setError("Error adding attendance.");
     }
+  } else {
+    setError("Something went wrong.");
+  }
+}
+
   };
 
   return (

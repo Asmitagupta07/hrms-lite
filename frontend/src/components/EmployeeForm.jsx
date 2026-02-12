@@ -29,8 +29,24 @@ function EmployeeForm({ refreshEmployees }) {
       });
       refreshEmployees();
     } catch (err) {
+  if (err.response && err.response.data) {
+    const errorData = err.response.data;
+
+    // Show specific field error
+    if (errorData.employee_id) {
+      setError(errorData.employee_id[0]);
+    } else if (errorData.email) {
+      setError(errorData.email[0]);
+    } else if (errorData.full_name) {
+      setError(errorData.full_name[0]);
+    } else {
       setError("Error adding employee.");
     }
+  } else {
+    setError("Something went wrong.");
+  }
+}
+
   };
 
   return (
