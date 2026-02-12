@@ -1,12 +1,5 @@
-# ✅ FINAL PROFESSIONAL README.md
-
-Copy everything below 👇
 
 ---
-
-```md
-
-
 # 🚀 HRMS Lite – Full Stack Application
 
 ## 📌 Project Overview
