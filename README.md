@@ -5,6 +5,8 @@ Copy everything below 👇
 ---
 
 ```md
+
+
 # 🚀 HRMS Lite – Full Stack Application
 
 ## 📌 Project Overview
@@ -94,7 +96,7 @@ This project demonstrates end-to-end full-stack development including:
 
 ---
 
-### 3️⃣ Dashboard Summary (Bonus Feature)
+### 3️⃣ Dashboard Summary
 
 - Total Employees
 - Total Attendance Records
@@ -104,7 +106,7 @@ This project demonstrates end-to-end full-stack development including:
 
 ---
 
-### 4️⃣ Filtering Features (Bonus)
+### 4️⃣ Filtering Features 
 
 - Filter employees by name
 - Filter employees by department
@@ -113,19 +115,6 @@ This project demonstrates end-to-end full-stack development including:
 
 ---
 
-### 5️⃣ UI & UX Features
-
-- Sidebar navigation with icons
-- Professional color theme (custom palette)
-- Card-based layout
-- Clean typography
-- Responsive grid structure
-- Loading states
-- Empty states
-- Error handling UI
-- Structured component-based design
-
----
 
 ## 🧾 Server-Side Validation & Error Handling
 
@@ -215,25 +204,8 @@ http://localhost:5173/
 
 ---
 
-## 🔐 Assumptions
 
-* Single admin user
-* No authentication required (as per assignment scope)
-* No payroll or leave management included
-* Designed as lightweight internal HR tool
 
----
-
-## 🎯 Future Improvements
-
-* Authentication system (JWT)
-* Role-based access control
-* Pagination for large datasets
-* Export attendance reports (CSV/PDF)
-* Advanced analytics dashboard
-* Improved mobile responsiveness
-
----
 
 ## 👩‍💻 Author
 
@@ -254,48 +226,10 @@ GitHub: [https://github.com/Asmitagupta07](https://github.com/Asmitagupta07)
 | Validation     | Implemented         |
 | Error Handling | Implemented         |
 
----
 
-# 🎉 Assignment Submission Ready
 
-This project fulfills:
-
-✔ Frontend Development
-✔ Backend API Design
-✔ Database Modeling & Persistence
-✔ Server-Side Validation
-✔ Error Handling
-✔ Deployment
-✔ Bonus Features
-✔ Production-Ready Architecture
 
 ---
 
-````
 
----
-
-# 🎯 What This README Achieves
-
-This now looks:
-
-- Professional
-- Clear
-- Structured
-- Evaluator-friendly
-- Production-ready
-- Cleanly documented
-- Bonus features highlighted
-
----
-
-Push this:
-
-```bash
-git add README.md
-git commit -m "Final professional README update"
-git push
-````
-
----
 
