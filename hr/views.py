@@ -17,8 +17,7 @@ class AttendanceViewSet(viewsets.ModelViewSet):
 @api_view(['GET'])
 def dashboard_summary(request):
     today = now().date()
-    print(f"pr check")
-
+    print(f"i am pr checking only {today}")
     total_employees = Employee.objects.count()
     total_attendance = Attendance.objects.count()
     present_today = Attendance.objects.filter(date=today, status='Present').count()
