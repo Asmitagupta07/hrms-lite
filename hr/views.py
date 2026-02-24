@@ -8,8 +8,12 @@ from django.utils.timezone import now
 
 class EmployeeViewSet(viewsets.ModelViewSet):
     queryset = Employee.objects.all()
-    print(f"quesry set count for pr ----{queryset.count()}")
     serializer_class = EmployeeSerializer
+
+    def list(self, request, *args, **kwargs):
+        # BAD PRACTICE: calling count() every request
+        print("Total employees:", Employee.objects.count())
+        return super().list(request, *args, **kwargs)
 
 class AttendanceViewSet(viewsets.ModelViewSet):
     queryset = Attendance.objects.all()
