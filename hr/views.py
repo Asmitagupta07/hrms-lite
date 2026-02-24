@@ -8,6 +8,7 @@ from django.utils.timezone import now
 
 class EmployeeViewSet(viewsets.ModelViewSet):
     queryset = Employee.objects.all()
+    print(f"quesry set count for pr ----{queryset.count()}")
     serializer_class = EmployeeSerializer
 
 class AttendanceViewSet(viewsets.ModelViewSet):
@@ -17,7 +18,6 @@ class AttendanceViewSet(viewsets.ModelViewSet):
 @api_view(['GET'])
 def dashboard_summary(request):
     today = now().date()
-    print(f"i am pr checking only {today}")
     total_employees = Employee.objects.count()
     total_attendance = Attendance.objects.count()
     present_today = Attendance.objects.filter(date=today, status='Present').count()
