@@ -10,6 +10,11 @@ class EmployeeViewSet(viewsets.ModelViewSet):
     queryset = Employee.objects.all()
     serializer_class = EmployeeSerializer
 
+    def list(self, request, *args, **kwargs):
+        # BAD PRACTICE: calling count() every request
+        print("Total employees:", Employee.objects.count())
+        return super().list(request, *args, **kwargs)
+
 class AttendanceViewSet(viewsets.ModelViewSet):
     queryset = Attendance.objects.all()
     serializer_class = AttendanceSerializer
@@ -17,7 +22,6 @@ class AttendanceViewSet(viewsets.ModelViewSet):
 @api_view(['GET'])
 def dashboard_summary(request):
     today = now().date()
-    print(f"i am pr checking only {today}")
     total_employees = Employee.objects.count()
     total_attendance = Attendance.objects.count()
     present_today = Attendance.objects.filter(date=today, status='Present').count()
